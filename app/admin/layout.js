@@ -4,9 +4,11 @@ import AdminNavbar from "../components/AdminNavbar";
 
 export default function AdminLayout({ children }) {
   return (
-    <AdminAuthProvider>
-      <AdminNavbar />
-      <main>{children}</main>
-    </AdminAuthProvider>
+    <div className="bg-white min-h-screen text-gray-900">
+      <AdminAuthProvider>
+        <AdminNavbar />
+        {children}
+      </AdminAuthProvider>
+    </div>
   );
 }
